@@ -88,7 +88,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
+  color: red;
   border-color: #0070f3;
 }
 

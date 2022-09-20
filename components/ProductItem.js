@@ -14,7 +14,7 @@ import { urlForThumbnail } from '../utils/image';
 
 export default function ProductItem({ product, addToCartHandler }) {
   return (
-    <Card>
+    <Card className="card-item">
       <NextLink href={`/product/${product.slug.current}`} passHref>
         <CardActionArea>
           <CardMedia

@@ -75,6 +75,7 @@ function OrderScreen({ params }) {
   const router = useRouter();
   const { state } = useContext(Store);
   const { userInfo } = state;
+
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
   useEffect(() => {
@@ -151,6 +152,7 @@ function OrderScreen({ params }) {
   function onError(err) {
     enqueueSnackbar(getError(err), { variant: 'error' });
   }
+
   return (
     <Layout title={`Order ${orderId}`}>
       <Typography component="h1" variant="h1">
