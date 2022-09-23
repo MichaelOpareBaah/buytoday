@@ -3,6 +3,7 @@ import { CacheProvider } from '@emotion/react';
 import { StoreProvider } from '../utils/Store';
 import { SnackbarProvider } from 'notistack';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import '../styles/globals.css';
 
 const clientSideEmotionCache = createCache({ key: 'css' });
 

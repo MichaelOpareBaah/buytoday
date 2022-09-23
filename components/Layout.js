@@ -35,6 +35,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 import { getError } from '../utils/error';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export default function Layout({ title, description, children }) {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function Layout({ title, description, children }) {
     components: {
       MuiLink: {
         defaultProps: {
-          underline: 'hover',
+          underline: 'none',
         },
       },
     },
@@ -63,7 +64,7 @@ export default function Layout({ title, description, children }) {
     palette: {
       mode: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#f0c000',
+        main: '#ff6a00',
       },
       secondary: {
         main: '#208080',
@@ -226,10 +227,10 @@ export default function Layout({ title, description, children }) {
                         color="secondary"
                         badgeContent={cart.cartItems.length}
                       >
-                        Cart
+                        <ShoppingCartIcon />
                       </Badge>
                     ) : (
-                      'Cart'
+                      <ShoppingCartIcon />
                     )}
                   </Typography>
                 </Link>
