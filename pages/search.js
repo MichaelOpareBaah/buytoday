@@ -9,6 +9,7 @@ import {
   Rating,
   Select,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
 import { Box } from '@mui/system';
 import axios from 'axios';
@@ -136,6 +137,8 @@ export default function SearchScreen() {
     dispatch,
   } = useContext(Store);
 
+  const isDesktop = useMediaQuery('(min-width:600px)');
+
   const { enqueueSnackbar } = useSnackbar();
   const addToCartHandler = async (product) => {
     const existItem = cart.cartItems.find((x) => x._id === product._id);
@@ -167,7 +170,7 @@ export default function SearchScreen() {
     <Layout title="search">
       <Grid sx={classes.section} container spacing={2}>
         <Grid item md={3}>
-          <List>
+          <List sx={isDesktop ? classes.visible : classes.hidden}>
             <ListItem>
               <Box sx={classes.fullWidth}>
                 <Typography>Categories</Typography>

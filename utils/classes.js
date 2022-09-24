@@ -44,6 +44,10 @@ const classes = {
   hidden: {
     display: 'none',
   },
+  minWidth: {
+    width: '50%',
+  },
+
   // search
 
   searchForm: {
